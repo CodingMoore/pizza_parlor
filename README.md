@@ -52,7 +52,7 @@ Test: should create a new instance of Pizza
 Expect: input(pizza).toResultIn(Pizza(size, meat, vegi))
 
 
-Description AddPizza()
+Description PizzaOrder.prototype.AddPizza()
 
 Test: should add a pizza to the pizzaOrder array
 Expect: input(pizza1).toResultIn(pizzaOrder[pizza1])
