@@ -33,7 +33,7 @@ No new features are planned at this time.
 ## **Specs**
 | Test | Input | Output |
 | :-- | :--| :-- |
-|should create a new instance of PizzaOrder | "order1" | "order1" |
+| should create a new instance of PizzaOrder | pizzaOrder | PizzaOrder(size,meat,vegi) |
 | | | |
 | | | |
 | | | |
@@ -43,10 +43,7 @@ No new features are planned at this time.
 Description: PizzaOrder()
 
 Test: should create a new instance of PizzaOrder
-code: let pizza = "order1"
-code: let pizzaOrder = new PizzaOrder(pizza)
-code: let result = pizzaOrder.pizzas;
-Description: result.toEqual(order1)
+Expect: input(pizzaOrder).toOutput(PizzaOrder(size,meat,vegi)
 
 
 
