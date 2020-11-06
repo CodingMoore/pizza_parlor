@@ -1,0 +1,23 @@
+
+#headerText {
+  font-size: 40pt;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: rgb(192, 78, 25);
+  border-radius: 20pt;
+}
+#formSubmit {
+  background-color: blanchedalmond;
+  border-radius: 5pt;
+  border: black;
+  border-width: 2pt;
+}
+#sizeField {
+margin: 20pt;
+}
+#meatField {
+margin: 20pt;
+}
+#vegiField {
+margin: 20pt;
+}
