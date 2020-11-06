@@ -33,11 +33,22 @@ No new features are planned at this time.
 ## **Specs**
 | Test | Input | Output |
 | :-- | :--| :-- |
-| should correctly create an instance of FlowerOrder | "Greg" | "Greg" |
-| should correctly add roses to instance of FlowerOrder | 4 roses | 4 |
-| should correctly add violets to instance of FlowerOrder | 6 violets | 6 |
-| should correctly sum up all flowers in FlowerOrder | 2 roses, 3 violets | 5 |
-| should correctly clear sum of flowers in FlowerOrder | 1 roses, 5 violets | 0 |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+
+
+Description: pizzaParlor()
+
+Test:
+Description:
+
+
+
+
+
 
 
 Description: mrRobo()
