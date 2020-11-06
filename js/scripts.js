@@ -44,15 +44,23 @@ PizzaOrder.prototype.PizzaCalcPrice = function() {
   return pizzaPriceArray;
 }
 
+PizzaOrder.prototype.OrderCalcPrice = function() {
+  pizzaPrice = 0
+  for (let i = 0; i < this.pizzas.length; i++) {
+  pizzaPrice += this.pizzas[i].size[1] + this.pizzas[i].meat[1] + this.pizzas[i].vegi[1];
+  }
+  return pizzaPrice;
+}
+
+
 let pizza1 = new Pizza(small, sausage, onion);
 pizzaOrder.AddPizza(pizza1);
 
 let pizza2 = new Pizza(large, deer, none);
 pizzaOrder.AddPizza(pizza2);
 
-
-
 //pizzaOrder.PizzaCalcPrice()
+
 
 
 
