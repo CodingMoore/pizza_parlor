@@ -36,7 +36,7 @@ No new features are planned at this time.
 | should create a new instance of PizzaOrder | pizzaOrder | PizzaOrder{Array(0)} |
 | should create a new instance of Pizza | pizza | Pizza(size, meat, vegi) |
 | should add a pizza to the pizzaOrder array | pizza1 | pizzaOrder.pizzas[Pizza] |
-| should add up the total cost of pizza| pizza1(small, sausage, onion) | 17 |
+| should add up the total cost of pizza| pizza1(small, sausage, onion) | 11.5 |
 | | | |
 
 
@@ -61,7 +61,7 @@ Expect: input(pizza1).toResultIn(pizzaOrder.pizzas[Pizza])
 Description: PizzaOrder.prototype.CalcPrice()
 
 Test: should add up the total cost of pizza
-Expect: input(pizza1(small, sausage, onion)).toResultIn(17)
+Expect: input(pizza1(small, sausage, onion)).toResultIn(11.5)
 
 
 
