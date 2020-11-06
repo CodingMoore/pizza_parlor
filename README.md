@@ -33,7 +33,7 @@ No new features are planned at this time.
 ## **Specs**
 | Test | Input | Output |
 | :-- | :--| :-- |
-| should create a new instance of PizzaOrder | pizzaOrder | PizzaOrder(size,meat,vegi) |
+| should create a new instance of PizzaOrder | pizzaOrder | PizzaOrder{Array(0)} |
 | | | |
 | | | |
 | | | |
@@ -43,7 +43,7 @@ No new features are planned at this time.
 Description: PizzaOrder()
 
 Test: should create a new instance of PizzaOrder
-Expect: input(pizzaOrder).toOutput(PizzaOrder(size,meat,vegi)
+Expect: input(pizzaOrder).toResultIn(PizzaOrder{Array(0)})
 
 
 
