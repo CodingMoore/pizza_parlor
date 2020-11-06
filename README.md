@@ -35,7 +35,7 @@ No new features are planned at this time.
 | :-- | :--| :-- |
 | should create a new instance of PizzaOrder | pizzaOrder | PizzaOrder{Array(0)} |
 | should create a new instance of Pizza | pizza | Pizza(size, meat, vegi) |
-| should add a pizza to the pizzaOrder array | pizza1 | pizzaOrder[pizza1] |
+| should add a pizza to the pizzaOrder array | pizza1 | pizzaOrder.pizzas[Pizza] |
 | | | |
 | | | |
 
@@ -55,7 +55,7 @@ Expect: input(pizza).toResultIn(Pizza(size, meat, vegi))
 Description PizzaOrder.prototype.AddPizza()
 
 Test: should add a pizza to the pizzaOrder array
-Expect: input(pizza1).toResultIn(pizzaOrder[pizza1])
+Expect: input(pizza1).toResultIn(pizzaOrder.pizzas[Pizza])
 
 
 

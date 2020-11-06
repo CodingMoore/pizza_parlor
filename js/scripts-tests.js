@@ -14,5 +14,10 @@ function Pizza(size,meat,vegi) {
   }
 console.log(pizza);
 
+PizzaOrder.prototype.AddPizza = function(pizza) {
+  this.pizzas.push(pizza);
+}
 
-
+let pizza1 = new Pizza("small", "sausage", "onion");
+pizzaOrder.AddPizza(pizza1);
+console.log(pizzaOrder.pizzas)
