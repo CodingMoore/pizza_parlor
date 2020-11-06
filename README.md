@@ -76,7 +76,7 @@ Test: should add up the prices of all pizzas on the order
 Expect: input(pizzaPriceArray[pizza1, pizza2]).toResultIn(34.5)
 
 
-Description: PizzaOrder.prototype.LastPizza()
+Description: PizzaOrder.prototype.LastPizzaPrice()
 
 Test: should return the last pizza in the pizzas array
 Expect: input(pizzas[pizza1, pizza2, pizza3]).toReslutIn(pizza3)
