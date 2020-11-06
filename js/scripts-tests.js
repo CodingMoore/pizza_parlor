@@ -12,4 +12,7 @@ function Pizza(size,meat,vegi) {
     this.meat = meat;
     this.vegi = vegi;
   }
-console.log(pizza)
+console.log(pizza);
+
+
+
