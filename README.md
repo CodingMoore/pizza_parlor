@@ -75,21 +75,6 @@ Description: PizzaOrder.prototype.OrderCalcPrice()
 Test: should add up the prices of all pizzas on the order
 Expect: input(pizzaPriceArray[pizza1, pizza2]).toResultIn(34.5)
 
-
-
-Description: mrRobo()
-
-Test: "It returns a list of numbers counting up to the number input by the user"
-Expect: mrRobo(5).toReturn "1, 2, 3, 4, 5"
-
-Test: "It returns "Won't you be my neighbor?" for any number containing "3".
-Expect: mrRobo(14).toReturn "0, 1, 2, "won't you be my neighbor", 4, 5, 6, 7, 8, 9, 10, 11, 12, "wont you be my neighbor", 14"
-
-Test: "It returns "Boop!" for any number containing "2".
-Expect: mrRobo(14).toReturn "0, 1, "Boop!", "won't you be my neighbor", 4, 5, 6, 7, 8, 9, 10, 11, "Boop!", "wont you be my neighbor", 14"
-
-Test: "it returns "Beep!" for any number containing "1".
-Expect: mrRobo(14).toReturn "0, "Beep!", "Boop!", "won't you be my neighbor", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "wont you be my neighbor", 14"
 ## **Known Bugs**
 There are no known bugs
 ## **Technology Used**

@@ -14,57 +14,61 @@
     <form id="inputForm">
       <div id="sizeField">
         <div class="Radio">
-          <input type="radio" name="pizzaSize" value=small>
+          <input type="radio" name="pizzaSize" value="small">
           Small
         </div>
         <div class="Radio">
-          <input type="radio" name="pizzaSize" value=medium>
+          <input type="radio" name="pizzaSize" value="medium">
           Medium
         </div>
         <div class="Radio">
-          <input type="radio" name="pizzaSize" value=large checked>
+          <input type="radio" name="pizzaSize" value="large" checked>
           Large
         </div>
       </div>
       <div id="meatField">
         <div class="Radio">
-          <input type="radio" name="meatType" value=none checked>
+          <input type="radio" name="meatType" value="none" checked>
           None
         </div>
         <div class="Radio">
-          <input type="radio" name="meatType" value=sausage>
+          <input type="radio" name="meatType" value="sausage">
           Sausage
         </div>
         <div class="Radio">
-          <input type="radio" name="meatType" value=chicken>
+          <input type="radio" name="meatType" value="chicken">
           Chicken
         </div><div class="Radio">
-          <input type="radio" name="meatType" value=deer>
+          <input type="radio" name="meatType" value="deer">
           Deer
         </div>
       </div>
       <div id="vegiField">
         <div class="Radio">
-          <input type="radio" name="vegiType" value=none checked>
+          <input type="radio" name="vegiType" value="none" checked>
           None
         </div>
         <div class="Radio">
-          <input type="radio" name="vegiType" value=onion>
+          <input type="radio" name="vegiType" value="onion">
           Onion
         </div>
         <div class="Radio">
-          <input type="radio" name="vegiType" value=carrots>
+          <input type="radio" name="vegiType" value="carrots">
           Carrots
         </div>
         <div class="Radio">
-          <input type="radio" name="vegiType" value=turnips>
+          <input type="radio" name="vegiType" value="turnips">
           Turnips
         </div>
       </div>
       <button id="formSubmit">Add to Cart</button>
     </form>
-    <div id="outputBox">
-      <span id="outputText"></span>
+    <div id="outputBox" class="col-12">
+      <div id="pizzaList" class="col-4">
+        
+      </div>
+      <p><span id="outputPizza"></span><span id="outputPizzaPrice"></span></p>
+      <p><span id="outputOrderPrice"></span></p>
     </div>
   </div>
 </body>

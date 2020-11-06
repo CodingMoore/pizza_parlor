@@ -15,25 +15,21 @@ const carrots = ["Carrots", .5]
 const turnips = ["Turnips", 1]
 
 let pizzaOrder = new PizzaOrder();
+// let pizza = new Pizza();
 
-function PizzaOrder(pizzas) {
+function PizzaOrder() {
   this.pizzas = [];
 }
-console.log(pizzaOrder);
   
-let pizza = new Pizza();
-
 function Pizza(size,meat,vegi) {
     this.size = size;
     this.meat = meat;
     this.vegi = vegi;
   }
-console.log(pizza);
 
 PizzaOrder.prototype.AddPizza = function(pizza) {
   this.pizzas.push(pizza);
 }
-
 
 PizzaOrder.prototype.PizzaCalcPrice = function() {
   let pizzaPriceArray = [];
@@ -45,7 +41,6 @@ PizzaOrder.prototype.PizzaCalcPrice = function() {
 }
 
 PizzaOrder.prototype.OrderCalcPrice = function() {
-  pizzaPrice = 0
   for (let i = 0; i < this.pizzas.length; i++) {
   pizzaPrice += this.pizzas[i].size[1] + this.pizzas[i].meat[1] + this.pizzas[i].vegi[1];
   }
@@ -53,24 +48,18 @@ PizzaOrder.prototype.OrderCalcPrice = function() {
 }
 
 
-let pizza1 = new Pizza(small, sausage, onion);
-pizzaOrder.AddPizza(pizza1);
+// let pizza1 = new Pizza(small, sausage, onion);
+// pizzaOrder.AddPizza(pizza1);
 
-let pizza2 = new Pizza(large, deer, none);
-pizzaOrder.AddPizza(pizza2);
-
-//pizzaOrder.PizzaCalcPrice()
-
-
-
-
-
+// let pizza2 = new Pizza(large, deer, none);
+// pizzaOrder.AddPizza(pizza2);
 
 
 
 //User Interface Logic
 $(document).ready(function() {
-  //user input code here (event)
-  event.preventDefault();
-
-};)
+  $("#formSubmit").click(function(event) {
+    event.preventDefault();
+    pizza = new Pizza($(".size").val(), $(".meat").val(), $(".vegi").val());
+  });
+});
