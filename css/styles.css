@@ -21,3 +21,11 @@ margin: 20pt;
 #vegiField {
 margin: 20pt;
 }
+#pizzaList {
+  list-style-type: none;
+  counter-reset: pizzaCounter;
+}
+#pizzaList>li:before {
+  content: "Pizza " counter(pizzaCounter) ": ";
+  counter-increment: pizzaCounter; 
+}

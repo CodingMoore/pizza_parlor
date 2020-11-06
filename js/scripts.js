@@ -41,6 +41,7 @@ PizzaOrder.prototype.PizzaCalcPrice = function() {
 }
 
 PizzaOrder.prototype.OrderCalcPrice = function() {
+  pizzaPrice = 0
   for (let i = 0; i < this.pizzas.length; i++) {
   pizzaPrice += this.pizzas[i].size[1] + this.pizzas[i].meat[1] + this.pizzas[i].vegi[1];
   }
@@ -48,18 +49,16 @@ PizzaOrder.prototype.OrderCalcPrice = function() {
 }
 
 
-// let pizza1 = new Pizza(small, sausage, onion);
-// pizzaOrder.AddPizza(pizza1);
-
-// let pizza2 = new Pizza(large, deer, none);
-// pizzaOrder.AddPizza(pizza2);
-
-
-
 //User Interface Logic
 $(document).ready(function() {
   $("#formSubmit").click(function(event) {
     event.preventDefault();
-    pizza = new Pizza($(".size").val(), $(".meat").val(), $(".vegi").val());
+    let pizzaSize = eval($("input:radio[name=pizzaSize]:checked").val());
+    let meatType = eval($("input:radio[name=meatType]:checked").val());
+    let vegiType = eval($("input:radio[name=vegiType]:checked").val());
+    pizza = new Pizza(pizzaSize, meatType, vegiType);
+    pizzaOrder.AddPizza(pizza);
+    $("#pizzaList").append("<li>" + pizzaOrder.PizzaCalcPrice() + "</li>");
+    $("#outputOrderPrice").text(pizzaOrder.OrderCalcPrice());
   });
 });
