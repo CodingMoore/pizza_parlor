@@ -46,6 +46,10 @@ Test: should create a new instance of PizzaOrder
 Expect: input(pizzaOrder).toResultIn(PizzaOrder{Array(0)})
 
 
+Description Pizza()
+
+Test: should create a new instance of Pizza
+Expect: input(pizza).toResultIn(Pizza(size, meat, vegi))
 
 
 
