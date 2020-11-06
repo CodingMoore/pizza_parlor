@@ -39,7 +39,7 @@ No new features are planned at this time.
 | should add up the total cost of pizza| pizza1(small, sausage, onion) | 11.5 |
 | should add up the total cost of each pizza in the pizzaOrder | pizza1(small, sausage, onion), pizza2(large, deer, none)| 11.5, 23 |
 | should add up the prices of all pizzas on the order | pizzaPriceArray[pizza1, pizza2] | 34.5 |
-| | | |
+| should return the last pizza in the pizzas array | pizzas[pizza1, pizza2, pizza3] | pizza3 |
 | | | |
 | | | |
 
@@ -74,6 +74,12 @@ Description: PizzaOrder.prototype.OrderCalcPrice()
 
 Test: should add up the prices of all pizzas on the order
 Expect: input(pizzaPriceArray[pizza1, pizza2]).toResultIn(34.5)
+
+
+Description: PizzaOrder.prototype.LastPizza()
+
+Test: should return the last pizza in the pizzas array
+Expect: input(pizzas[pizza1, pizza2, pizza3]).toReslutIn(pizza3)
 
 ## **Known Bugs**
 There are no known bugs

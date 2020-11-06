@@ -1,4 +1,6 @@
-
+body {
+  font-size: 14pt;
+}
 #headerText {
   font-size: 40pt;
   box-sizing: border-box;
@@ -24,8 +26,35 @@ margin: 20pt;
 #pizzaList {
   list-style-type: none;
   counter-reset: pizzaCounter;
+  margin: 0pt;
+  padding: 0pt;
+  font-weight: bold;
 }
 #pizzaList>li:before {
-  content: "Pizza " counter(pizzaCounter) ": ";
-  counter-increment: pizzaCounter; 
+  content: "Pizza " counter(pizzaCounter) ": $";
+  counter-increment: pizzaCounter;
+}
+#pizzaListBox {
+  border-color: black;
+  border-width: 2pt;
+  border-style: solid;
+  background-color: burlywood;
+  margin-top: 20pt;
+}
+#pizzaListBoxText {
+  font-size: 20pt;
+  background-color: blanchedalmond;
+  padding-left: 6pt;
+  padding-right: 6pt;
+  border-radius: 5pt;
+}
+#totalText {
+  font-size: 18pt;
+  font-weight: bold;
+  margin-top: 10pt;
+  border-top: black;
+  border-bottom: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-style: dashed;
 }

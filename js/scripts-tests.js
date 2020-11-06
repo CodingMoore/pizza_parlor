@@ -49,6 +49,7 @@ PizzaOrder.prototype.OrderCalcPrice = function() {
 }
 
 
+
 //User Interface Logic
 $(document).ready(function() {
   $("#formSubmit").click(function(event) {
@@ -58,7 +59,8 @@ $(document).ready(function() {
     let vegiType = eval($("input:radio[name=vegiType]:checked").val());
     pizza = new Pizza(pizzaSize, meatType, vegiType);
     pizzaOrder.AddPizza(pizza);
-    $("#pizzaList").append("<li>" + pizzaOrder.PizzaCalcPrice() + "</li>");
+    
+    $("#pizzaList").append("<li>" + lastPizza() + "</li>");
     $("#outputOrderPrice").text(pizzaOrder.OrderCalcPrice());
   });
 });
