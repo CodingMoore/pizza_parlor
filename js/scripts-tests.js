@@ -31,14 +31,14 @@ PizzaOrder.prototype.AddPizza = function(pizza) {
   this.pizzas.push(pizza);
 }
 
-PizzaOrder.prototype.PizzaCalcPrice = function() {
-  let pizzaPriceArray = [];
-  for (let i = 0; i < this.pizzas.length; i++) {
-  pizzaPrice = this.pizzas[i].size[1] + this.pizzas[i].meat[1] + this.pizzas[i].vegi[1];
-  pizzaPriceArray.push(pizzaPrice);
-  }
-  return pizzaPriceArray;
-}
+// PizzaOrder.prototype.PizzaCalcPrice = function() {
+//   let pizzaPriceArray = [];
+//   for (let i = 0; i < this.pizzas.length; i++) {
+//   pizzaPrice = this.pizzas[i].size[1] + this.pizzas[i].meat[1] + this.pizzas[i].vegi[1];
+//   pizzaPriceArray.push(pizzaPrice);
+//   }
+//   return pizzaPriceArray;
+// }
 
 PizzaOrder.prototype.OrderCalcPrice = function() {
   pizzaPrice = 0;

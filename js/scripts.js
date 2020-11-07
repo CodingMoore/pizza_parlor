@@ -1,21 +1,17 @@
-//General Pricing
 const small = ["Small", 10];
 const medium = ["Medium", 15];
 const large = ["Large", 20];
 const none = ["none", 0];
 
-//Meat
 const sausage = ["Sausage", 1];
 const chicken = ["Chicken", 1];
 const deer = ["Deer", 3];
 
-//Vegi
 const onion = ["Onion", .5];
 const carrots = ["Carrots", .5];
 const turnips = ["Turnips", 1];
 
 let pizzaOrder = new PizzaOrder();
-// let pizza = new Pizza();
 
 function PizzaOrder() {
   this.pizzas = [];
@@ -31,15 +27,6 @@ PizzaOrder.prototype.AddPizza = function(pizza) {
   this.pizzas.push(pizza);
 }
 
-PizzaOrder.prototype.PizzaCalcPrice = function() {
-  let pizzaPriceArray = [];
-  for (let i = 0; i < this.pizzas.length; i++) {
-  pizzaPrice = this.pizzas[i].size[1] + this.pizzas[i].meat[1] + this.pizzas[i].vegi[1];
-  pizzaPriceArray.push(pizzaPrice);
-  }
-  return pizzaPriceArray;
-}
-
 PizzaOrder.prototype.OrderCalcPrice = function() {
   pizzaPrice = 0;
   for (let i = 0; i < this.pizzas.length; i++) {
@@ -53,7 +40,7 @@ PizzaOrder.prototype.LastPizzaPrice = function() {
   return lastPizzaPrice;
 }
 
-//User Interface Logic
+
 $(document).ready(function() {
   $("#formSubmit").click(function(event) {
     event.preventDefault();
@@ -62,7 +49,6 @@ $(document).ready(function() {
     let vegiType = eval($("input:radio[name=vegiType]:checked").val());
     pizza = new Pizza(pizzaSize, meatType, vegiType);
     pizzaOrder.AddPizza(pizza);
-    
     $("#pizzaList").append("<li>" + pizzaOrder.LastPizzaPrice() + "</li>");
     $("#outputOrderPrice").text(pizzaOrder.OrderCalcPrice());
   });
