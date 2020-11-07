@@ -40,7 +40,7 @@ No new features are planned at this time.
 | should add up the total cost of each pizza in the pizzaOrder | pizza1(small, sausage, onion), pizza2(large, deer, none)| 11.5, 23 |
 | should add up the prices of all pizzas on the order | pizzaPriceArray[pizza1, pizza2] | 34.5 |
 | should return the last pizza in the pizzas array | pizzas[pizza1, pizza2, pizza3] | pizza3 |
-| | | |
+| should return the size and all chosen topings for a given pizza as a sting | pizza1(large, deer, none) | "large, deer" |
 | | | |
 
 Description: PizzaOrder()
@@ -80,6 +80,12 @@ Description: PizzaOrder.prototype.LastPizzaPrice()
 
 Test: should return the last pizza in the pizzas array
 Expect: input(pizzas[pizza1, pizza2, pizza3]).toReslutIn(pizza3)
+
+
+Description: PizzaOrder.prototype.Toppings()
+
+Test: should return the size and all chosen topings for a given pizza as a sting
+Expect: input(pizza1(large, deer, none)).toResultIn("large, deer")
 
 ## **Known Bugs**
 There are no known bugs

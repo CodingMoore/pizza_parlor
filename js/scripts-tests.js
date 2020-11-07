@@ -62,8 +62,9 @@ $(document).ready(function() {
     let vegiType = eval($("input:radio[name=vegiType]:checked").val());
     pizza = new Pizza(pizzaSize, meatType, vegiType);
     pizzaOrder.AddPizza(pizza);
-    
     $("#pizzaList").append("<li>" + pizzaOrder.LastPizzaPrice() + "</li>");
     $("#outputOrderPrice").text(pizzaOrder.OrderCalcPrice());
+    console.log(Object.values(pizzaOrder.pizzas[0].meat));
   });
 });
+
