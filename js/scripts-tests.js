@@ -53,6 +53,12 @@ PizzaOrder.prototype.LastPizzaPrice = function() {
   return lastPizzaPrice;
 }
 
+// PizzaOrder.prototype.Toppings = function() {
+//   for (let i = 0; i < this.pizza; i++) {
+
+//   }
+// }
+
 //User Interface Logic
 $(document).ready(function() {
   $("#formSubmit").click(function(event) {
@@ -64,7 +70,8 @@ $(document).ready(function() {
     pizzaOrder.AddPizza(pizza);
     $("#pizzaList").append("<li>" + pizzaOrder.LastPizzaPrice() + "</li>");
     $("#outputOrderPrice").text(pizzaOrder.OrderCalcPrice());
-    console.log(Object.values(pizzaOrder.pizzas[0].meat));
+    console.log();
   });
 });
+
 
