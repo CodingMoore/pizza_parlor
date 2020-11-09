@@ -1,8 +1,14 @@
 body {
-  font-size: 14pt;
+  font-size: 14pt;background-color: rgb(163, 187, 176);
+}
+.container {
+  background-color: rgba(37, 118, 150, 0.658);
+  padding: 40pt;
 }
 #headerText {
-  font-size: 40pt;
+  font-size: 50pt;
+  font-family: Helvetica;
+  font-weight: bold;
   box-sizing: border-box;
   text-align: center;
   background-color: rgb(192, 78, 25);
@@ -14,14 +20,24 @@ body {
   border: black;
   border-width: 2pt;
 }
-#sizeField {
-margin: 20pt;
+.form-check-inline {
+font-size: 20pt;
+display: flex;
+justify-content: space-evenly;
+font-weight: bold;
 }
-#meatField {
-margin: 20pt;
+#toppingsParentBox {
+  border-style: solid;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10pt;
+  padding-bottom: 10pt;
+  margin-top: 15pt;
+  font-weight: bold;
 }
-#vegiField {
-margin: 20pt;
+#toppingText {
+  text-align: center;
+  font-weight: bold;
 }
 #pizzaList {
   list-style-type: none;
@@ -43,7 +59,7 @@ margin: 20pt;
 }
 #pizzaListBoxText {
   font-size: 20pt;
-  background-color: blanchedalmond;
+  font-weight: bold;
   padding-left: 6pt;
   padding-right: 6pt;
   border-radius: 5pt;
@@ -57,7 +73,4 @@ margin: 20pt;
   border-left: transparent;
   border-right: transparent;
   border-style: dashed;
-}
-.toppingText {
-  margin-top: 40pt;
 }

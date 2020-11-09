@@ -10,54 +10,56 @@
 </head>
 <body>
   <div class="container">
-    <p id="headerText">Ye Olde Pizza Shoppe</p>
+    <p id="headerText">Oddities Pizzeria</p>
     <form id="inputForm">
-      <div id="sizeField">
+      <div id="sizeField" class="form-check-inline">
         <div class="Radio">
           <input type="radio" name="pizzaSize" value="small" checked>
-          Small
+          Small - $10
         </div>
         <div class="Radio">
           <input type="radio" name="pizzaSize" value="medium">
-          Medium
+          Medium - $15
         </div>
         <div class="Radio">
           <input type="radio" name="pizzaSize" value="large">
-          Large
+          Large - $20
         </div>
       </div>
       <div class="form-group">
-        <div id="cheeseBox">
-          <p class="toppingText id="cheeseText">Cheeses</p>
-          <input type="checkbox" name="toppings" value="gargonzola" checked> Gargonzola<br>
-          <input type="checkbox" name="toppings" value="stilton"> Stilton<br>
-          <input type="checkbox" name="toppings" value="limburger"> Limburger<br>
-          <input type="checkbox" name="toppings" value="camelCheese"> Camel Cheese<br>
-          <input type="checkbox" name="toppings" value="casuMartzu"> Casu Martzu<br>
-        </div>
-        <div id="meatBox">
-          <p class="toppingText id="meatText">Meats</p>
-          <input type="checkbox" name="toppings" value="armadillo" checked> Armadillo<br>
-          <input type="checkbox" name="toppings" value="deer"> Deer<br>
-          <input type="checkbox" name="toppings" value="opossom"> Opossom<br>
-          <input type="checkbox" name="toppings" value="alligator"> Alligator<br>
-          <input type="checkbox" name="toppings" value="kangaroo"> Kangaroo<br>
-        </div>
-        <div id="veggieBox">
-          <p class="toppingText id="veggieText">Veggies</p>
-          <input type="checkbox" name="toppings" value="rutabaga" checked> Rutabaga<br>
-          <input type="checkbox" name="toppings" value="blueGreenAlgae"> Blue-Green Algae<br>
-          <input type="checkbox" name="toppings" value="grass"> Grass<br>
-          <input type="checkbox" name="toppings" value="palmFronds"> Palm Fronds<br>
-          <input type="checkbox" name="toppings" value="cactus"> Cactus<br>
-        </div>
-        <div id="extrasBox">
-          <p class="toppingText id="extrasText">Extras</p>
-          <input type="checkbox" name="toppings" value="roastedAnts" checked> Roasted Ants<br>
-          <input type="checkbox" name="toppings" value="hornToadTears"> Horn-Toad Tears<br>
-          <input type="checkbox" name="toppings" value="tarantulaHair"> Tarantula Hair<br>
-          <input type="checkbox" name="toppings" value="gratedLichen"> Grated Lichen<br>
-          <input type="checkbox" name="toppings" value="alkaSeltzer"> Alka-Seltzer®<br>
+        <div id="toppingsParentBox">
+          <div id="cheeseBox">
+            <p class="toppingText id="cheeseText" style="font-size: 18pt; font-weight: bold;">Cheeses</p>
+            <input type="checkbox" name="toppings" value="gargonzola" checked> Gargonzola<br>
+            <input type="checkbox" name="toppings" value="stilton"> Stilton<br>
+            <input type="checkbox" name="toppings" value="limburger"> Limburger<br>
+            <input type="checkbox" name="toppings" value="camelCheese"> Camel Cheese<br>
+            <input type="checkbox" name="toppings" value="casuMartzu"> Casu Martzu<br>
+          </div>
+          <div id="meatBox">
+            <p class="toppingText id="meatText" style="font-size: 18pt; font-weight: bold;">Meats</p>
+            <input type="checkbox" name="toppings" value="armadillo" checked> Armadillo<br>
+            <input type="checkbox" name="toppings" value="deer"> Deer<br>
+            <input type="checkbox" name="toppings" value="opossom"> Opossom<br>
+            <input type="checkbox" name="toppings" value="alligator"> Alligator<br>
+            <input type="checkbox" name="toppings" value="kangaroo"> Kangaroo<br>
+          </div>
+          <div id="veggieBox">
+            <p class="toppingText id="veggieText" style="font-size: 18pt; font-weight: bold;">Veggies</p>
+            <input type="checkbox" name="toppings" value="rutabaga" checked> Rutabaga<br>
+            <input type="checkbox" name="toppings" value="blueGreenAlgae"> Blue-Green Algae<br>
+            <input type="checkbox" name="toppings" value="grass"> Grass<br>
+            <input type="checkbox" name="toppings" value="palmFronds"> Palm Fronds<br>
+            <input type="checkbox" name="toppings" value="cactus"> Cactus<br>
+          </div>
+          <div id="extrasBox">
+            <p class="toppingText id="extrasText" style="font-size: 18pt; font-weight: bold;">Extras</p>
+            <input type="checkbox" name="toppings" value="roastedAnts" checked> Roasted Ants<br>
+            <input type="checkbox" name="toppings" value="hornToadTears"> Horn-Toad Tears<br>
+            <input type="checkbox" name="toppings" value="tarantulaHair"> Tarantula Hair<br>
+            <input type="checkbox" name="toppings" value="gratedLichen"> Grated Lichen<br>
+            <input type="checkbox" name="toppings" value="alkaSeltzer"> Alka-Seltzer®<br>
+          </div>
         </div>
       </div>
       <button id="formSubmit">Add to Cart</button>
