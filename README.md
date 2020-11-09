@@ -1,5 +1,5 @@
 # **pizza_parlor**
-Updated: 2020-11-06
+Updated: 2020-11-09
 ## **Project Description**
 This project allows user to select a pizza by size, and to select toppings.  The user can then add these pizzas to the "cart".  The cart will keep track of the cost of each pizza and keep a rolling total at the bottom.
 ## **Required for Use**
@@ -22,14 +22,12 @@ https://rmgit-it.github.io/pizza_parlor
 3) Once the project has finished downloading, navigate to the root directory of the project in the terminal/console, and type <code>code .</code> and then hit return/enter.
 
 The project should automatically launch using your default application(s).
-## **Usage / Examples**
 
 ## **Planned Features**
-* additional pizza topping options.
-* website to list the items on each pizza when added to the cart.
 * the ability to remove pizzas from the cart.
 * a psudo-checkout function.
 * improved styling.
+* improved view-port scaling.
 ## **Specs**
 | Test | Input | Output |
 | :-- | :--| :-- |
@@ -88,7 +86,7 @@ Test: should return the size and all chosen topings for a given pizza as a sting
 Expect: input(pizza1(large, deer, none)).toResultIn("large, deer")
 
 ## **Known Bugs**
-There are no known bugs
+Poor scaling on smaller view-port sizes/
 ## **Technology Used**
 * HTML
 * JavaScript
