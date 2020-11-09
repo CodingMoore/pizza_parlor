@@ -74,7 +74,6 @@ PizzaOrder.prototype.Size = function() {
   return sizeListArray.join("");
 }
 
-// to output names of toppings to order form
 PizzaOrder.prototype.Toppings = function() {
   let toppingsListArray = [];
   for (let i = 0; i < this.pizzas[this.pizzas.length - 1].toppings.length; i++) {
@@ -84,8 +83,6 @@ PizzaOrder.prototype.Toppings = function() {
 }
 
 
-
-//User Interface Logic
 $(document).ready(function() {
   $("#formSubmit").click(function(event) {
     event.preventDefault();

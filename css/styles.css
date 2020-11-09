@@ -13,6 +13,7 @@ body {
   text-align: center;
   background-color: rgb(192, 78, 25);
   border-radius: 20pt;
+  margin-bottom: 30pt;
 }
 #formSubmit {
   background-color: blanchedalmond;

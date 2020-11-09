@@ -83,8 +83,6 @@ PizzaOrder.prototype.Toppings = function() {
 }
 
 
-
-//User Interface Logic
 $(document).ready(function() {
   $("#formSubmit").click(function(event) {
     event.preventDefault();
