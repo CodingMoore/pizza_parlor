@@ -10,55 +10,56 @@
 </head>
 <body>
   <div class="container">
-    <p id="headerText">Ye Olde Pizza Shoppe</p>
+    <p id="headerText">Oddities Pizzeria</p>
     <form id="inputForm">
-      <div id="sizeField">
+      <div id="sizeField" class="form-check-inline">
         <div class="Radio">
-          <input type="radio" name="pizzaSize" value="small">
-          Small
+          <input type="radio" name="pizzaSize" value="small" checked>
+          Small - $10
         </div>
         <div class="Radio">
           <input type="radio" name="pizzaSize" value="medium">
-          Medium
+          Medium - $15
         </div>
         <div class="Radio">
-          <input type="radio" name="pizzaSize" value="large" checked>
-          Large
-        </div>
-      </div>
-      <div id="meatField">
-        <div class="Radio">
-          <input type="radio" name="meatType" value="none" checked>
-          None
-        </div>
-        <div class="Radio">
-          <input type="radio" name="meatType" value="sausage">
-          Sausage
-        </div>
-        <div class="Radio">
-          <input type="radio" name="meatType" value="chicken">
-          Chicken
-        </div><div class="Radio">
-          <input type="radio" name="meatType" value="deer">
-          Deer
+          <input type="radio" name="pizzaSize" value="large">
+          Large - $20
         </div>
       </div>
-      <div id="vegiField">
-        <div class="Radio">
-          <input type="radio" name="vegiType" value="none" checked>
-          None
-        </div>
-        <div class="Radio">
-          <input type="radio" name="vegiType" value="onion">
-          Onion
-        </div>
-        <div class="Radio">
-          <input type="radio" name="vegiType" value="carrots">
-          Carrots
-        </div>
-        <div class="Radio">
-          <input type="radio" name="vegiType" value="turnips">
-          Turnips
+      <div class="form-group">
+        <div id="toppingsParentBox">
+          <div id="cheeseBox">
+            <p class="toppingText id="cheeseText" style="font-size: 18pt; font-weight: bold;">Cheeses</p>
+            <input type="checkbox" name="toppings" value="gargonzola"> Gargonzola - $1<br>
+            <input type="checkbox" name="toppings" value="stilton"> Stilton - $1.5<br>
+            <input type="checkbox" name="toppings" value="limburger"> Limburger - $2<br>
+            <input type="checkbox" name="toppings" value="camelCheese"> Camel Cheese - $3<br>
+            <input type="checkbox" name="toppings" value="casuMartzu"> Casu Martzu - $4.5<br>
+          </div>
+          <div id="meatBox">
+            <p class="toppingText id="meatText" style="font-size: 18pt; font-weight: bold;">Meats</p>
+            <input type="checkbox" name="toppings" value="armadillo"> Armadillo - $1<br>
+            <input type="checkbox" name="toppings" value="deer"> Deer - $4.5<br>
+            <input type="checkbox" name="toppings" value="opossom"> Opossom .5<br>
+            <input type="checkbox" name="toppings" value="alligator"> Alligator - $2<br>
+            <input type="checkbox" name="toppings" value="kangaroo"> Kangaroo - $3<br>
+          </div>
+          <div id="veggieBox">
+            <p class="toppingText id="veggieText" style="font-size: 18pt; font-weight: bold;">Veggies</p>
+            <input type="checkbox" name="toppings" value="rutabaga"> Rutabaga - $1<br>
+            <input type="checkbox" name="toppings" value="blueGreenAlgae"> Blue-Green Algae - $.5<br>
+            <input type="checkbox" name="toppings" value="grass"> Grass - $.5<br>
+            <input type="checkbox" name="toppings" value="palmFronds"> Palm Fronds - $2<br>
+            <input type="checkbox" name="toppings" value="cactus"> Cactus - $2<br>
+          </div>
+          <div id="extrasBox">
+            <p class="toppingText id="extrasText" style="font-size: 18pt; font-weight: bold;">Extras</p>
+            <input type="checkbox" name="toppings" value="roastedAnts"> Roasted Ants - $1<br>
+            <input type="checkbox" name="toppings" value="hornToadTears"> Horn-Toad Tears - $6<br>
+            <input type="checkbox" name="toppings" value="tarantulaHair"> Tarantula Hair - $2.5<br>
+            <input type="checkbox" name="toppings" value="gratedLichen"> Grated Lichen - $2<br>
+            <input type="checkbox" name="toppings" value="alkaSeltzer"> Alka-Seltzer® - $20<br>
+          </div>
         </div>
       </div>
       <button id="formSubmit">Add to Cart</button>
@@ -70,6 +71,9 @@
         <p id="totalText">Total: $<span id="outputOrderPrice"></span></p>
       </div>
       <p><span id="outputPizza"></span><span id="outputPizzaPrice"></span></p>
+    </div>
+    <div>
+      <button id="orderButton">Order</button>
     </div>
   </div>
 </body>
