@@ -31,21 +31,22 @@ const tarantulaHair = ["Tarantula Hair", 2.5];
 const gratedLichen = ["Grated Lichen", 2];
 const alkaSeltzer = ["Alka-Seltzer", 20];
 
-let orderPrice = 0;
-let pizzaOrder = new PizzaOrder();
-
 function PizzaOrder() {
   this.pizzas = [];
+  this.orderPrice = 0;
+  this.lastPizzaPrice = 0;
 }
-  
+
 function Pizza(size, toppings) {
-    this.size = size;
-    this.toppings = toppings;
-  }
+  this.size = size;
+  this.toppings = toppings;
+  this.sizeListString = "";
+}
 
 function Toppings(name, price) {
-    this.name = name;
-    this.price = price;
+  this.name = name;
+  this.price = price;
+  this.toppingsListString = "";
 };
 
 PizzaOrder.prototype.AddPizza = function(pizza) {
@@ -53,25 +54,25 @@ PizzaOrder.prototype.AddPizza = function(pizza) {
 }
 
 PizzaOrder.prototype.LastPizzaPrice = function() {
-  let lastPizzaPrice = 0;
+  let toppingsValue = 0;
   for (let i = 0; i < this.pizzas[this.pizzas.length - 1].toppings.length; i++) {
-    lastPizzaPrice += (this.pizzas[this.pizzas.length - 1].toppings[i].price);
+    toppingsValue += (this.pizzas[this.pizzas.length - 1].toppings[i].price);
+    console.log(toppingsValue);
   }
-  return lastPizzaPrice + this.pizzas[this.pizzas.length - 1].size[1];
+  return this.lastPizzaPrice = toppingsValue + this.pizzas[this.pizzas.length - 1].size[1];
 }
 
 PizzaOrder.prototype.OrderCalcPrice = function() {
-  orderPrice += this.LastPizzaPrice();
-  return orderPrice;
+  this.orderPrice += this.lastPizzaPrice;
+  return this.orderPrice;
 }
 
 PizzaOrder.prototype.Size = function() {
-  let sizeListArray = [];
+  this.sizeListArray = [];
   for (let i = 1; i < this.pizzas[this.pizzas.length - 1].size.length; i++) {
-    sizeListArray.push(this.pizzas[this.pizzas.length - 1].size[0]);
-    console.log(sizeListArray);
+    this.sizeListArray.push(this.pizzas[this.pizzas.length - 1].size[0]);
   }
-  return sizeListArray.join("");
+  return this.sizeListString = this.sizeListArray.join("");
 }
 
 PizzaOrder.prototype.Toppings = function() {
@@ -79,24 +80,30 @@ PizzaOrder.prototype.Toppings = function() {
   for (let i = 0; i < this.pizzas[this.pizzas.length - 1].toppings.length; i++) {
     toppingsListArray.push(this.pizzas[this.pizzas.length - 1].toppings[i].name);
   }
-  return toppingsListArray.join(", ");
+  return this.toppingsListString = toppingsListArray.join(", ");
 }
 
-
 $(document).ready(function() {
+  let pizzaOrder = new PizzaOrder();
+  
   $("#formSubmit").click(function(event) {
     event.preventDefault();
     let toppingsArray = [];
     let pizzaSize = eval($("input:radio[name=pizzaSize]:checked").val());
-      $("input:checkbox[name=toppings]:checked").each(function() {
+    $("input:checkbox[name=toppings]:checked").each(function() {
       let toppings = new Toppings(eval($(this).val())[0], eval($(this).val())[1]);
       toppingsArray.push(toppings);
     });
     let pizza = new Pizza(pizzaSize, toppingsArray);
     pizzaOrder.AddPizza(pizza);
-    $("#pizzaList").append("<li>" + pizzaOrder.LastPizzaPrice() + "<ul>" + pizzaOrder.Size() + ": " + "<span style='font-size: 12pt'>" + pizzaOrder.Toppings() + "</span>" + "</ul>" + "</li>");
-    $("#outputOrderPrice").text(pizzaOrder.OrderCalcPrice());
+    let piePrice = pizzaOrder.LastPizzaPrice();
+    let pieSize = pizzaOrder.Size();
+    let pieToppings = pizzaOrder.Toppings();
+    let order = pizzaOrder.OrderCalcPrice();
+    $("#pizzaList").append("<li>" + piePrice + "<ul>" + pieSize + ": " + "<span style='font-size: 12pt'>" + pieToppings + "</span>" + "</ul>" + "</li>");
+    $("#outputOrderPrice").text(order);
   });
+
   $("#orderButton").click(function(event) {
     alert("Just kidding! This isn't real website.");
   });
